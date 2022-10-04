@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_todo/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -44,6 +45,13 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                     onPressed: () {
                       if (email == 'cairo@email' && pswd == 'teste123') {
+                        /* Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => HomePage())); 
+                            //mantem a tela anterior disponível com btn de voltar
+                            */
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => HomePage()));
+                        //exclui a tela anterior
                         print('logado');
                       } else {
                         print('login errado');
