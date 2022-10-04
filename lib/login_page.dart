@@ -49,9 +49,11 @@ class _LoginPageState extends State<LoginPage> {
                             builder: (context) => HomePage())); 
                             //mantem a tela anterior disponível com btn de voltar
                             */
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => HomePage()));
+                        /* Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => HomePage())); */
                         //exclui a tela anterior
+                        /*  Navigator.of(context).pushNamed('/home'); */
+                        Navigator.of(context).pushReplacementNamed('/home');
                         print('logado');
                       } else {
                         print('login errado');

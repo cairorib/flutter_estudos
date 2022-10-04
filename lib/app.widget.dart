@@ -19,7 +19,12 @@ class AppWidget extends StatelessWidget {
               brightness: AppController.instance.isDartTheme
                   ? Brightness.dark
                   : Brightness.light /* brightness: Brightness.light */),
-          home: LoginPage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
+          /*    home: LoginPage(), */
         );
       },
     );
