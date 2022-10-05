@@ -48,6 +48,8 @@ class HomePageState extends State<HomePage> {
             CustomSwitcher(),
             Container(height: 50, width: 50, color: Colors.red),
             CustomSwitcher(),
+            Container(height: 50, width: 50, color: Colors.red),
+            CustomSwitcher(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
