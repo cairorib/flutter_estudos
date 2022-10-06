@@ -15,6 +15,39 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     /* return Container(child: Center(child: Text('ALELUIA ALELUIA'))); */
     return Scaffold(
+      drawer: Drawer(
+        child: Column(children: [
+          UserAccountsDrawerHeader(
+              currentAccountPicture: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: ClipOval(
+                  child: Image.network(
+                      'https://img.freepik.com/vetores-gratis/fundo-gradiente-da-paisagem-do-por-do-sol-da-praia_23-2148979774.jpg?h=200;w=200'),
+                ),
+              ),
+              /* child: Image.network(
+                    'https://img.freepik.com/vetores-gratis/fundo-gradiente-da-paisagem-do-por-do-sol-da-praia_23-2148979774.jpg?h=200;w=200'),
+              ), */
+              accountName: Text('GLÓRIA AO SENHOR DEUS!!!'),
+              accountEmail: Text('cairo@email.com')),
+          ListTile(
+            leading: Icon(Icons.home),
+            onTap: () {
+              print('ALELUIA!!!');
+            },
+            title: Text('Inicio'),
+            subtitle: Text('Tela de Início'),
+          ),
+          ListTile(
+            leading: Icon(Icons.account_circle_sharp),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            },
+            title: Text('Inicio'),
+            subtitle: Text('Tela de Início'),
+          )
+        ]),
+      ),
       appBar: AppBar(
         title: Text('ALELUIA!!!'),
         actions: [
